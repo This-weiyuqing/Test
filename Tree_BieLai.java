@@ -44,10 +44,12 @@ public class Tree_BieLai {
             if (!(obj instanceof BinaryNode<?>)) {
                 return false;
             }
-            BinaryNode other=(BinaryNode) obj;
+            BinaryNode other=(BinaryNode) obj;//强制类型转换。将传入的Object类局部变量转换为BinaryNode类局部变量。
 //            if (this.data==other.data){
+            //到了这里才真正的有了两颗二叉树局部变量，才能进行比较。
                 return (this.data==other.data&&this.left.data==other.left.data&&this.right.data==other.right.data);
 //            }
+            //可以加一个循环，遍历比较每个结点的值。
 //            return this.data == other.data && this.left.equals(other.left) && this.right.equals(other.right);
         }//链，分别指向父母结点、左和右孩子结点
     }
